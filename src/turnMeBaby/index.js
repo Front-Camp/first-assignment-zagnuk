@@ -8,7 +8,10 @@
  * turnMeBaby('Some text'); // 'txet emoS'
  */
 const turnMeBaby = str => {
-  return str.split("").reduce((rev, char) => char + rev, '')
+  if(typeof str === 'string' || str instanceof String){
+    return str.split("").reduce((rev, char) => char + rev, '')
+  }
+  throw "Parameter is not a string!";
 };
 
 export default turnMeBaby;

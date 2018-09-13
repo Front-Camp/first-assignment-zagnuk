@@ -10,7 +10,10 @@
 * sum(-1, 13); // 12
 */
 const sum = (a, b) => {
-  return a + b;
+  if(Number.isFinite(a) && Number.isFinite(b)){
+    return a + b;
+  }
+  throw "Parameters are not a number."
 };
 
 export default sum;
