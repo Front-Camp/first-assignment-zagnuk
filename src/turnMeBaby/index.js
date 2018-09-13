@@ -8,7 +8,7 @@
  * turnMeBaby('Some text'); // 'txet emoS'
  */
 const turnMeBaby = str => {
-  /* your logic here...*/
+  return str.split("").reduce((rev, char) => char + rev, '')
 };
 
 export default turnMeBaby;
